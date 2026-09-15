@@ -89,30 +89,30 @@ public class PrestamoService {
     }
 
     if (dias <= 14) {
-        return (dias - 7) * 100;
+        return (double) (dias - 7) * 100;
     }
 
     if (dias <= 21) {
-        return (dias - 7) * 150;
+        return (double) (dias - 7) * 150;
     }
 
     if (dias <= 30) {
-        return (dias - 7) * 200;
+        return (double) (dias - 7) * 200;
     }
 
     if (dias <= 45) {
-        return (dias - 7) * 300;
+        return (double) (dias - 7) * 300;
     }
 
     if (dias <= 60) {
-        return (dias - 7) * 400;
+        return (double) (dias - 7) * 400;
     }
 
     if (dias <= 90) {
-        return (dias - 7) * 500;
+        return (double) (dias - 7) * 500;
     }
 
-    return (dias - 7) * 750;
+    return (double) (dias - 7) * 750;
 }
 
 

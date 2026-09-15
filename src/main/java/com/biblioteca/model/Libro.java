@@ -14,6 +14,9 @@ public class Libro {
     private String autor;
 
     private boolean prestado;
+    
+	private static final String CASO_NO_SE_PUEDE_PRESTAR = "No se puede prestar";
+
 
     public Libro() {
     }
@@ -69,21 +72,22 @@ public class Libro {
     }
 
     public String prestar() {
+ 
 
         if (titulo == null) {
-            return "No se puede prestar";
+            return CASO_NO_SE_PUEDE_PRESTAR;
         }
 
         if (titulo.isEmpty()) {
-            return "No se puede prestar";
+            return CASO_NO_SE_PUEDE_PRESTAR;
         }
 
         if (autor == null) {
-            return "No se puede prestar";
+            return CASO_NO_SE_PUEDE_PRESTAR;
         }
 
         if (autor.isEmpty()) {
-            return "No se puede prestar";
+            return CASO_NO_SE_PUEDE_PRESTAR;
         }
 
         if (prestado) {

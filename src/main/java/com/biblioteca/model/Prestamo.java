@@ -3,6 +3,7 @@ package com.biblioteca.model;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.time.ZoneId;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
@@ -92,6 +93,6 @@ public class Prestamo {
 
     public void devolver() {
         this.devuelto = true;
-        this.fechaDevolucion = LocalDate.now();
+        this.fechaDevolucion = LocalDate.now(ZoneId.systemDefault());
     }
 }
